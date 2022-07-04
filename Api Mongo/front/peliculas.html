@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="peliculas.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Movie</title>
+</head>
+<body>
+    <h1>Peliculas</h1>
+    <div class="datos">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre Pelicula">
+            <div class="d-flex">
+                <input type="text" class="form-control"    id="actorMovie" name="actorMovie" placeholder="actores">
+                <button class="btn btn-outline-secondary"  id="getactor"    onclick="getActoresFromPeliculaId()">Mostrar</button>
+                <button class="btn btn-outline-secondary"  id="postactor"   onclick="postPeliculaActor()">Crear</button>
+                <button class="btn btn-outline-secondary"  id="deleteactor" onclick="deletePeliculasActor()">Eliminar</button>
+            </div>
+            <div class="d-flex">
+                <input type="text" class="form-control"    id="director" name="director" placeholder="directores">
+                <button class="btn btn-outline-secondary"  id="getdirector" onclick="getDirectorsFromPeliculaId()">Mostrar</button>
+                <button class="btn btn-outline-secondary"  id="postdirector" onclick="postPeliculaDirector()">Crear</button>
+                <button class="btn btn-outline-secondary"  id="deletedirector" onclick="deletePeliculasDirector()">Eliminar</button>
+            </div>
+            <div class="d-flex">
+                <input type="text" class="form-control"    id="producter" name="producter"  placeholder="productor">
+                <button class="btn btn-outline-secondary"  id="getproductor" onclick="getProducterFromPeliculaId()">Mostrar</button>
+            </div>
+            </div>
+            <div class="d-flex">
+                <input type="text" class="form-control"    id="screenwriter" name="screenwriter" placeholder="guionistas">
+                <button class="btn btn-outline-secondary"  id="getwriter" onclick="getGuionistasFromPeliculaId()">Mostrar</button>
+                <button class="btn btn-outline-secondary"  id="postwriter" onclick="postPeliculaGuionista()">Crear</button>
+                <button class="btn btn-outline-secondary"  id="deletewriter" onclick="deletePeliculasGuionista()">Eliminar</button>
+            </div>
+            <input type="text" class="form-control" id="year" name="year" placeholder="año">
+            <input type="text" class="form-control" id="_id" name="_id" placeholder="Id Pelicula">
+        </div>
+        <div class="d-flex justify-content-center gap-2 mt-2">
+            <button class="btn btn-outline-secondary"  id="show"   onclick="getPeliculas()">Mostrar</button>
+            <button class="btn btn-outline-secondary"  id="create" onclick="postPeliculas()">Crear</button>
+            <button class="btn btn-outline-secondary"  id="update" onclick="putPeliculas()">Actualizar</button>
+            <button class="btn btn-outline-secondary"  id="delete" onclick="deletePeliculas()">Eliminar</button>
+        </div>
+        <div id="show-users" class="d-flex justify-content-center mt-2">  
+        </div>
+    
+        <div id="toast" class="toast position-fixed top-0 end-0 p-3 align-items-center text-white border-0" role="alert"
+        aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div id="toastText" class="toast-body">
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+           
+    </main>
+            <script src="peliculas.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    
+    </body>
+    </html>
